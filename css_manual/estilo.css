@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    background-color: rgb(238, 238, 238);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.botao{
+    background-color: rgb(68, 209, 139);
+    color: white;
+    height: 45px;
+}
+
+.esq-password a{
+    text-decoration: none;
+    list-style: none;
+    color: rgb(68, 209, 139);
+    cursor: pointer;
+}
+
+.input-form input{
+    height: 45px;
+}
+.input-form input:focus{
+    border: 2px solid rgb(68, 209, 139);;
+}
+
+/*CSS da 2º Página - cadastre-se*/
+
+.botao-pg2{
+    margin-top: 15px;
+    background-color: rgb(68, 209, 139);
+    color: white;
+    height: 45px;
+}
+.btn-visited:visited{
+    background-color: rgb(68, 209, 139);
+}
+.btn-no-visited:visited{
+    background-color:rgb(168, 168, 168) ;
+}
+
+/*CSS da 3º Página - Recuperar senha com e-mail*/
+
+.title-pg3{
+    font-size: 17px;
+    text-align: center;
+    font-weight: bold;
+}
+.p-pg3{
+    text-align: center;
+    justify-content: center;
+    font-weight: 100;
+}
+
+.botao-pg3{
+    margin-top: 15px;
+    background-color: rgb(68, 209, 139);
+    color: white;
+    height: 45px;
+}
+.btn-no-visited-pg3{
+    background-color:rgb(168, 168, 168)
+}
