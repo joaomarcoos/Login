@@ -26,6 +26,18 @@ body{
     border: 2px solid rgb(68, 209, 139);;
 }
 
+/*Configuração dos botões e links visitados ou não*/
+
+.botao-no-visited{
+    background-color: rgb(173, 171, 171);
+    color: white;
+    height: 45px;
+}
+.botao{
+    background-color: rgb(68, 209, 139);
+    color: white;
+    height: 45px;
+}
 /*CSS da 2º Página - cadastre-se*/
 
 .botao-pg2{
