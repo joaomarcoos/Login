@@ -52,7 +52,7 @@
                 <i class="icofont-unlock input-group-text"></i>
               </div>
 
-              <input class="form-control" type="password" id="senha" placeholder="Digite sua senha">
+              <input class="form-control senha" type="password" placeholder="Digite sua senha">
 
               <div class="input-group-append">
                 <span class="iconeSenha icofont-eye-alt input-group-text btn olho1" role="button"></span>
@@ -115,7 +115,7 @@
                 <i class="icofont-smart-phone input-group-text"></i>
               </div>
 
-              <input class="form-control" type="text" placeholder="Seu número de celular" required>
+              <input class="form-control" type="text" id="masktelefone" placeholder="Seu número de celular" required>
             </div>
 
             <div class="form-group input-group input-form">
@@ -133,13 +133,14 @@
                 <i class="icofont-unlock input-group-text"></i>
               </div>
 
-              <input class="form-control" type="password" id="senha" placeholder="Digite uma senha forte" required>
+              <input class="form-control senha" type="password" placeholder="Digite uma senha forte" required>
 
               <div class="input-group-append">
                 <span class="iconeSenha icofont-eye-alt input-group-text btn olho1" role="button"></span>
                 <span class="iconeSenha2 icofont-eye-blocked input-group-text btn olho2" role="button"
                   style="display: none;"></span>
               </div>
+
             </div>
 
             <div class="form-group input-group input-form">
@@ -148,7 +149,7 @@
                 <i class="icofont-unlock input-group-text"></i>
               </div>
 
-              <input class="form-control" type="password" id="senha" placeholder="Digite sua senha novamente" required>
+              <input class="form-control senha" type="password" placeholder="Digite sua senha novamente" required>
 
               <div class="input-group-append">
                 <span class="iconeSenha icofont-eye-alt input-group-text btn olho1" role="button"></span>
@@ -216,54 +217,11 @@
 
     </div>
 
-    <!--4º Página - Criar nova Senha-->
-    <div class="bg-light page-4" style="display: none;">
-
-      <div class="d-flex flex-column justify-content-center align-items-center shadow rounded px-sm-5 py-sm-3">
-
-        <div>
-          <img src="./img/img1.png" class="img-fluid" alt="logo">
-        </div>
-
-        <div style="margin-top: 10px; margin-bottom: 10px;">
-          <h2 class="text-left title-pg4">Crie uma nova senha</h2>
-        </div>
-
-        <div class="container">
-          <form action="#">
-
-            <div class="form-group input-group input-form">
-
-              <div class="input-group-prepend">
-                <i class="icofont-unlock input-group-text"></i>
-              </div>
-
-              <input class="form-control" type="text" placeholder="Digite a sua nova senha" required>
-            </div>
-
-            <div class="form-group input-group input-form">
-
-              <div class="input-group-prepend">
-                <i class="icofont-unlock input-group-text"></i>
-              </div>
-
-              <input class="form-control" type="text" placeholder="Confirme a sua nova senha" required>
-            </div>
-
-            <div class="row d-flex justify-content-center">
-              <div class=" col-6 form-group">
-                <input class="btn btn-block botao" value="Alterar senha" type="button">
-              </div>
-            </div>
-          </form>
-        </div>
-
-      </div>
-
     </div>
 
     <!--jQuery 3.6.0-->
     <script src="./jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <script src="./jquery-3.6.0/jquery.mask.js"></script>
 
     <!--JavaScript-Bootstrap-4-->
     <script src="./bootstrap-4/js/bootstrap.min.js"></script>

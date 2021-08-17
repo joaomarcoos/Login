@@ -21,6 +21,10 @@ $(document).ready(function(){
         $('.page1').show(800);
     })
 
+    /*Configuração da máscara dos inputs */
+
+    $('#masktelefone').mask('(00) 0 0000-0000')
+
 
     /*Configuração para mostrar e ocultar senha dos inputs */
 
@@ -28,13 +32,13 @@ $(document).ready(function(){
         $('.iconeSenha').hide();
         $('.iconeSenha2').show();
 
-        $('#senha').attr('type', 'text');
+        $('.senha').attr('type', 'text');
     })
 
     $('.olho2').on('click', function(){
         $('.iconeSenha2').hide();
         $('.iconeSenha').show();
 
-        $('#senha').attr('type', 'password');
+        $('.senha').attr('type', 'password');
     })
 })
