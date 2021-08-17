@@ -77,3 +77,11 @@ botaoEntrar.addEventListener('click', function(evente){
 
 
 })
+
+/*Validação da área de  cadastro */
+
+const finalizarCadastro = document.getElementById('fizalizarcadastro');
+
+finalizarCadastro.addEventListener('click', function(evento){
+    evento.preventDefault();
+})
