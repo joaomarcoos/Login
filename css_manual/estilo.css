@@ -59,3 +59,12 @@ body{
     justify-content: center;
     font-weight: 100;
 }
+
+/*configuração CSS para mostrar erro no valor do input*/
+
+.erroinput{
+    border: 1px solid red !important ;
+}
+.validinput{
+    border: 1px solid rgb(11, 238, 11) !important;
+}

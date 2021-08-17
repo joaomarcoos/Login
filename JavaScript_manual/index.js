@@ -42,3 +42,38 @@ $(document).ready(function(){
         $('.senha').attr('type', 'password');
     })
 })
+
+/*Validação de e-mail */
+
+const botaoEntrar = document.getElementById('btnEntrar');
+
+botaoEntrar.addEventListener('click', function(evente){
+
+    evente.preventDefault();
+
+    const emailLogin = document.getElementById('emaillogin');
+
+    const senhaLogin = document.getElementById('senhalogin');
+
+    if(emailLogin.value == ''){
+        emailLogin.classList.add('erroinput')
+    }else{
+        emailLogin.classList.remove("erroinput");
+    }
+
+    if(emailLogin.value.indexOf("@") == -1 || emailLogin.value.indexOf('.') == -1 || (emailLogin.value.indexOf('.') - emailLogin.value.indexOf('@') == 1)){
+        emailLogin.classList.add('erroinput')
+    }else{
+        emailLogin.classList.remove('erroinput');
+        emailLogin.classList.add('validinput');
+    }
+
+    if(senhaLogin.value == "" && senhaLogin.value.length <= 5){
+        senhaLogin.classList.add('erroinput')
+    }else{
+        senhaLogin.classList.remove('erroinput')
+        senhaLogin.classList.add('validinput')
+    }
+
+
+})
