@@ -2,6 +2,8 @@
 
 $(document).ready(function(){
 
+    /* Configuração para a chamda de uma página para outra através dos botões */
+
     $('#cadastro').on('click', function(){
         $('.page1').hide();
         $('.page2').show(800);
@@ -21,7 +23,7 @@ $(document).ready(function(){
 
 
     /*Configuração para mostrar e ocultar senha dos inputs */
-    
+
     $('.olho1').on('click', function(){
         $('.iconeSenha').hide();
         $('.iconeSenha2').show();
