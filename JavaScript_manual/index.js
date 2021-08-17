@@ -117,10 +117,16 @@ finalizaCadastro.addEventListener('click', function(){
 
     if(senhaCadastro.value == ''){
         senhaCadastro.classList.add('erroinput')
+    }else{
+        senhaCadastro.classList.remove('erroinput')
+        senhaCadastro.classList.add('validinput')
     }
 
     if(senhaCadastro2.value == ''){
         senhaCadastro2.classList.add('erroinput')
+    }else{
+        senhaCadastro2.classList.remove('erroinput')
+        senhaCadastro2.classList.add('validinput')
     }
     
 })
