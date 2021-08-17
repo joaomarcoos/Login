@@ -18,4 +18,21 @@ $(document).ready(function(){
         $('.page3').hide();
         $('.page1').show(800);
     })
+
+
+    /*Configuração para mostrar e ocultar senha dos inputs */
+    
+    $('.olho1').on('click', function(){
+        $('.iconeSenha').hide();
+        $('.iconeSenha2').show();
+
+        $('#senha').attr('type', 'text');
+    })
+
+    $('.olho2').on('click', function(){
+        $('.iconeSenha2').hide();
+        $('.iconeSenha').show();
+
+        $('#senha').attr('type', 'password');
+    })
 })
