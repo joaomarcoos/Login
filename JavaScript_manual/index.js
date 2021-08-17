@@ -1,22 +1,22 @@
 //jQuery
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     /* Configuração para a chamda de uma página para outra através dos botões */
 
-    $('#cadastro').on('click', function(){
+    $('#cadastro').on('click', function () {
         $('.page1').hide();
         $('.page2').show(800);
     })
-    $('#temcadastro').on('click', function(){
+    $('#temcadastro').on('click', function () {
         $('.page2').hide();
         $('.page1').show(800);
     })
-    $('#esquecisenha').on('click', function(){
+    $('#esquecisenha').on('click', function () {
         $('.page1').hide();
         $('.page3').show(800);
     })
-    $('#voltar').on('click', function(){
+    $('#voltar').on('click', function () {
         $('.page3').hide();
         $('.page1').show(800);
     })
@@ -28,14 +28,14 @@ $(document).ready(function(){
 
     /*Configuração para mostrar e ocultar senha dos inputs */
 
-    $('.olho1').on('click', function(){
+    $('.olho1').on('click', function () {
         $('.iconeSenha').hide();
         $('.iconeSenha2').show();
 
         $('.senha').attr('type', 'text');
     })
 
-    $('.olho2').on('click', function(){
+    $('.olho2').on('click', function () {
         $('.iconeSenha2').hide();
         $('.iconeSenha').show();
 
@@ -47,7 +47,7 @@ $(document).ready(function(){
 
 const botaoEntrar = document.getElementById('btnEntrar');
 
-botaoEntrar.addEventListener('click', function(evente){
+botaoEntrar.addEventListener('click', function (evente) {
 
     evente.preventDefault();
 
@@ -55,22 +55,22 @@ botaoEntrar.addEventListener('click', function(evente){
 
     const senhaLogin = document.getElementById('senhalogin');
 
-    if(emailLogin.value == ''){
+    if (emailLogin.value == '') {
         emailLogin.classList.add('erroinput')
-    }else{
+    } else {
         emailLogin.classList.remove("erroinput");
     }
 
-    if(emailLogin.value.indexOf("@") == -1 || emailLogin.value.indexOf('.') == -1 || (emailLogin.value.indexOf('.') - emailLogin.value.indexOf('@') == 1)){
+    if (emailLogin.value.indexOf("@") == -1 || emailLogin.value.indexOf('.') == -1 || (emailLogin.value.indexOf('.') - emailLogin.value.indexOf('@') == 1)) {
         emailLogin.classList.add('erroinput')
-    }else{
+    } else {
         emailLogin.classList.remove('erroinput');
         emailLogin.classList.add('validinput');
     }
 
-    if(senhaLogin.value == "" && senhaLogin.value.length <= 5){
+    if (senhaLogin.value == "" && senhaLogin.value.length <= 5) {
         senhaLogin.classList.add('erroinput')
-    }else{
+    } else {
         senhaLogin.classList.remove('erroinput')
         senhaLogin.classList.add('validinput')
     }
@@ -82,8 +82,8 @@ botaoEntrar.addEventListener('click', function(evente){
 
 const finalizaCadastro = document.getElementById('finalizarcadastro')
 
-finalizaCadastro.addEventListener('click', function(){
-    
+finalizaCadastro.addEventListener('click', function () {
+
     const nome = document.getElementById('seunome')
     const numeroCelular = document.getElementById('masktelefone')
     const emailCadastro = document.getElementById('emailcadastro')
@@ -91,66 +91,95 @@ finalizaCadastro.addEventListener('click', function(){
     const senhaCadastro2 = document.getElementById('senhacadastro2')
     const caixa = document.getElementById('caixa-checkbox')
 
-    if(nome.value =='' || !isNaN(nome.value)){
+    if (nome.value == '' || !isNaN(nome.value)) {
         nome.classList.add('erroinput')
-    }else{
+    } else {
         nome.classList.remove('erroinput')
     }
 
-    if(numeroCelular.value == ''){
+    if (numeroCelular.value == '') {
         numeroCelular.classList.add('erroinput')
-    }else{
+    } else {
         numeroCelular.classList.remove('erroinput')
     }
 
-    if(emailCadastro.value == ''){
+    if (emailCadastro.value == '') {
         emailCadastro.classList.add('erroinput')
-    }else{
+    } else {
         emailCadastro.classList.remove('erroinput')
     }
 
-    if(emailCadastro.value.indexOf("@") == -1 || emailCadastro.value.indexOf('.') == -1 || (emailCadastro.value.indexOf('.') - emailCadastro.value.indexOf('@') == 1)){
+    if (emailCadastro.value.indexOf("@") == -1 || emailCadastro.value.indexOf('.') == -1 || (emailCadastro.value.indexOf('.') - emailCadastro.value.indexOf('@') == 1)) {
         emailCadastro.classList.add('erroinput')
-    }else{
+    } else {
         emailCadastro.classList.remove('erroinput')
     }
 
-    if(senhaCadastro.value == ''){
+    if (senhaCadastro.value == '') {
         senhaCadastro.classList.add('erroinput')
-    }else{
+    } else {
         senhaCadastro.classList.remove('erroinput')
         senhaCadastro.classList.add('validinput')
     }
 
-    if(senhaCadastro2.value == ''){
+    if (senhaCadastro2.value == '') {
         senhaCadastro2.classList.add('erroinput')
-    }else{
+    } else {
         senhaCadastro2.classList.remove('erroinput')
         senhaCadastro2.classList.add('validinput')
     }
-    
+
 })
 
 /*Validação recupera e-mail */
 
 const btnRecuperaEmail = document.getElementById('enviarecuperaemail')
 
-btnRecuperaEmail.addEventListener('click', function(e){
+btnRecuperaEmail.addEventListener('click', function (e) {
 
     e.preventDefault();
 
     const recuperaEmail = document.getElementById('recuperaemail')
 
-    if(recuperaEmail.value ==''){
+    if (recuperaEmail.value == '') {
         recuperaEmail.classList.add('erroinput')
-    }else{
+    } else {
         recuperaEmail.classList.remove('erroinput')
     }
 
-    if(recuperaEmail.value.indexOf("@") == -1 || recuperaEmail.value.indexOf('.') == -1 || (recuperaEmail.value.indexOf('.') - recuperaEmail.value.indexOf('@') == 1)){
+    if (recuperaEmail.value.indexOf("@") == -1 || recuperaEmail.value.indexOf('.') == -1 || (recuperaEmail.value.indexOf('.') - recuperaEmail.value.indexOf('@') == 1)) {
         recuperaEmail.classList.add('erroinput')
-    }else{
+    } else {
         recuperaEmail.classList.remove('erroinput')
+
+        $('.page3').hide();
+        $('.page4').show(800);
     }
 
+})
+
+/*Validação Digite nova senha */
+
+const alterarSenha = document.getElementById('alterasenha')
+
+alterarSenha.addEventListener('click', function(event){
+    event.preventDefault();
+
+    const novaSenha1 = document.getElementById('novasenha')
+    const novaSenha2 = document.getElementById('novasenha2')
+
+    if(novaSenha1.value == ''){
+        novaSenha1.classList.add('erroinput')
+    }else{
+        novaSenha1.classList.remove('erroinput')
+    }
+
+    if(novaSenha2.value == ''){
+        novaSenha2.classList.add('erroinput')
+    }else{
+        novaSenha2.classList.remove('erroinput')
+
+        $('.page4').hide();
+        $('.page1').show(800);
+    }
 })
