@@ -34,12 +34,6 @@ body{
     color: white;
     height: 45px;
 }
-.btn-visited:visited{
-    background-color: rgb(68, 209, 139);
-}
-.btn-no-visited:visited{
-    background-color:rgb(168, 168, 168) ;
-}
 
 /*CSS da 3º Página - Recuperar senha com e-mail*/
 
@@ -52,14 +46,4 @@ body{
     text-align: center;
     justify-content: center;
     font-weight: 100;
-}
-
-.botao-pg3{
-    margin-top: 15px;
-    background-color: rgb(68, 209, 139);
-    color: white;
-    height: 45px;
-}
-.btn-no-visited-pg3{
-    background-color:rgb(168, 168, 168)
 }
