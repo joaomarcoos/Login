@@ -80,8 +80,71 @@ botaoEntrar.addEventListener('click', function(evente){
 
 /*Validação da área de  cadastro */
 
-const finalizarCadastro = document.getElementById('fizalizarcadastro');
+const finalizaCadastro = document.getElementById('finalizarcadastro')
 
-finalizarCadastro.addEventListener('click', function(evento){
-    evento.preventDefault();
+finalizaCadastro.addEventListener('click', function(){
+    
+    const nome = document.getElementById('seunome')
+    const numeroCelular = document.getElementById('masktelefone')
+    const emailCadastro = document.getElementById('emailcadastro')
+    const senhaCadastro = document.getElementById('senhacadastro')
+    const senhaCadastro2 = document.getElementById('senhacadastro2')
+    const caixa = document.getElementById('caixa-checkbox')
+
+    if(nome.value =='' || !isNaN(nome.value)){
+        nome.classList.add('erroinput')
+    }else{
+        nome.classList.remove('erroinput')
+    }
+
+    if(numeroCelular.value == ''){
+        numeroCelular.classList.add('erroinput')
+    }else{
+        numeroCelular.classList.remove('erroinput')
+    }
+
+    if(emailCadastro.value == ''){
+        emailCadastro.classList.add('erroinput')
+    }else{
+        emailCadastro.classList.remove('erroinput')
+    }
+
+    if(emailCadastro.value.indexOf("@") == -1 || emailCadastro.value.indexOf('.') == -1 || (emailCadastro.value.indexOf('.') - emailCadastro.value.indexOf('@') == 1)){
+        emailCadastro.classList.add('erroinput')
+    }else{
+        emailCadastro.classList.remove('erroinput')
+    }
+
+    if(senhaCadastro.value == ''){
+        senhaCadastro.classList.add('erroinput')
+    }
+
+    if(senhaCadastro2.value == ''){
+        senhaCadastro2.classList.add('erroinput')
+    }
+    
+})
+
+/*Validação recupera e-mail */
+
+const btnRecuperaEmail = document.getElementById('enviarecuperaemail')
+
+btnRecuperaEmail.addEventListener('click', function(e){
+
+    e.preventDefault();
+
+    const recuperaEmail = document.getElementById('recuperaemail')
+
+    if(recuperaEmail.value ==''){
+        recuperaEmail.classList.add('erroinput')
+    }else{
+        recuperaEmail.classList.remove('erroinput')
+    }
+
+    if(recuperaEmail.value.indexOf("@") == -1 || recuperaEmail.value.indexOf('.') == -1 || (recuperaEmail.value.indexOf('.') - recuperaEmail.value.indexOf('@') == 1)){
+        recuperaEmail.classList.add('erroinput')
+    }else{
+        recuperaEmail.classList.remove('erroinput')
+    }
+
 })
